@@ -54,7 +54,7 @@ git clone https://github.com/seu-usuario/nomedoprojeto.git
 4. Edite o nome da pessoa no script, linha:
 
 ```js
-const personName = "PessoaAlvo";
+const personName = "Hinata";
 ```
 
 5. Abra o `index.html` no navegador e surpreenda a pessoa amada!

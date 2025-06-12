@@ -99,11 +99,15 @@ footer {
 .caption {
   margin-bottom: 50px;
   animation: fadeIn 2s ease;
-  font-style: italic;
-  font-weight: 400;
   font-size: 1.2rem;
-  color: #fff;
+  color: #ffffff;
   padding: 0 10px;
+  font-family: "Borel", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow:
+    0 0 5px rgba(0, 0, 0, 0.5),
+    0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .container {
@@ -236,6 +240,10 @@ footer {
 .swiper-button-next,
 .swiper-button-prev {
   color: #d81b60 !important;
+  width: 44px;
+  height: 44px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .swiper-button-next:hover,
@@ -280,5 +288,26 @@ footer {
 
   .swiper {
     width: 95vw;
+  }
+}
+
+@media (max-width: 780px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 32px;
+    height: 32px;
+  }
+  .swiper-button-next {
+    right: 10px;  /* afasta da borda */
+  }
+  .swiper-button-prev {
+    left: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
   }
 }

@@ -3,12 +3,12 @@ const yesBtn = document.getElementById('btnYes');
 const finalMessage = document.getElementById('finalMessage');
 const proposalText = document.getElementById('proposalText');
 const gallery = document.getElementById('galleryScreen');
-const music = new Audio('audio/Ed Sheeran - Photograph.mp3');
+const music = document.getElementById('bgMusic');
 music.loop = true;
 
 const timeBeforeTransition = 10000; // 10s
 
-const personName = "PessoaAlvo";
+const personName = "Hinata";
 proposalText.textContent = `💌 ${personName}, quer namorar comigo?`;
 
 const messages = [
@@ -38,7 +38,7 @@ new Swiper('.swiper', {
   speed: 1500,
   loop: true,
   autoplay: {
-    delay: 5000,
+    delay: 6000,
     disableOnInteraction: false
   },
   pagination: { el: '.swiper-pagination' },
@@ -49,7 +49,9 @@ new Swiper('.swiper', {
 });
 
 function handleYesClick() {
-  music.play();
+  music.play().catch(err => {
+    console.warn("Não foi possível iniciar a música automaticamente:", err);
+  });
 
   finalMessage.textContent = "";
   typeText(
@@ -99,7 +101,7 @@ function triggerSparkles() {
     setTimeout(() => sparkle.remove(), 7000);
   }, 300);
 
-  setTimeout(() => clearInterval(sparkleInterval), timeBeforeTransition * 2);
+  setTimeout(() => clearInterval(sparkleInterval), timeBeforeTransition * 20);
 }
 
 function createFloatingCaption() {
