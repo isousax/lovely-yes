@@ -1,42 +1,71 @@
-# 💖 Lovely Yes
+# 💖 Projeto: Pedido de Namoro Interativo
 
-**Lovely Yes** is a fun and interactive landing page for romantic proposals.  
-It features two buttons: **"Yes"** and **"No"** — the "No" button always escapes the cursor!  
-Clicking "Yes" triggers fireworks and confetti animations with a custom message.
+Uma página romântica e divertida para pedidos românticos de uma forma surpreendente, com interatividade, música, animações e galeria de fotos.
 
----
+## ✨ Funcionalidades
 
-## 🌟 Features
+- Pedido de namoro com botões "SIM" e "NÃO";
+- Botão "NÃO" que foge do cursor;
+- Ao clicar em "SIM":
+  - Reproduz a música *Photograph* de Ed Sheeran;
+  - Exibe uma mensagem digitada automaticamente;
+  - Animações de corações e brilhos flutuantes;
+  - Mensagens flutuantes de carinho;
+  - Transição suave para uma galeria de fotos do casal com legendas.
 
-- ✨ Responsive, romantic design
-- 💌 Fully customizable message and names
-- 😂 "No" button moves away from the cursor
-- 🎉 Confetti/fireworks animation when "Yes" is clicked
-- 📱 Mobile-friendly and lightweight
-- 🛠️ Easy-to-edit code, no frameworks needed
+## 🧠 Tecnologias Utilizadas
 
----
+- HTML5, CSS3 e JavaScript
+- [Swiper.js](https://swiperjs.com/) para o carrossel de imagens
+- Google Fonts para tipografia personalizada
 
-## 🚀 Getting Started
+## 📁 Estrutura de Arquivos
 
-1. Clone or download the repository:
-   ```bash
-   git clone https://github.com/your-username/lovely-yes.git
-   
-2. Open the index.html
+```
+/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+├── img/
+│   ├── img1.png
+│   ├── img2.png
+│   └── img3.png
+├── audio/
+│   └── Ed Sheeran - Photograph.mp3
+└── README.md
+```
 
-3. Customize the script directly by editing:
-   ```bash
-    const personName = "Camila";
-    const proposalText = `💌 Will you be my girlfriend, ${personName}?`;
-    const finalMessage = "You just made my world brighter! 💘";
+## 📸 Galeria
 
-4. Optionally, change colors, fonts, add music or images to personalize the experience further.
+A galeria de fotos é exibida após a aceitação do pedido, com efeito de transição suave entre imagens e mensagens românticas.
 
-## 🛠️ Technologies used
+## 🔧 Como Usar
 
-- HTML5
-- CSS3
-- JavaScript Vanilla
-- Canvas Confetti
+1. Clone o repositório:
 
+```bash
+git clone https://github.com/seu-usuario/nomedoprojeto.git
+```
+
+2. Coloque suas imagens em `img/`, substituindo as existentes.
+3. Troque o arquivo de música em `audio/` se desejar (Mantenha o nome do arquivo ou altere a linha 6 no script.js).
+4. Edite o nome da pessoa no script, linha:
+
+```js
+const personName = "PessoaAlvo";
+```
+
+5. Abra o `index.html` no navegador e surpreenda a pessoa amada!
+
+## 💡 Dicas
+
+- Para resultados ainda mais impactantes, use fotos reais do casal e personalize as mensagens no array `messages`.
+- Certifique-se de que todos os arquivos estejam com o caminho correto ao subir para hospedagem.
+
+## 🧡 Licença
+
+Este projeto é livre para uso pessoal e não comercial. Dê os créditos se for compartilhar publicamente.
+
+Criado por @isousa.x
