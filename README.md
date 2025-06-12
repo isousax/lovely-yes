@@ -46,7 +46,7 @@ A galeria de fotos é exibida após a aceitação do pedido, com efeito de trans
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/nomedoprojeto.git
+git clone https://github.com/seu-usuario/lovely-yes.git
 ```
 
 2. Coloque suas imagens em `img/`, substituindo as existentes.
