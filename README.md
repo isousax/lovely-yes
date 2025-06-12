@@ -1,4 +1,4 @@
-# 💖 Projeto: Pedido de Namoro Interativo
+# 💖 Projeto: Lovely Yes
 
 Uma página romântica e divertida para pedidos românticos de uma forma surpreendente, com interatividade, música, animações e galeria de fotos.
 
