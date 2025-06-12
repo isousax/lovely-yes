@@ -20,11 +20,7 @@ const messages = [
 ];
 
 noBtn.addEventListener('mouseenter', moveNoButton);
-noBtn.addEventListener('click', triggerFakeError);
-
-function triggerFakeError() {
-  alert("Desculpe, ocorreu um erro. Tente novamente.");
-}
+noBtn.addEventListener('click', moveNoButton);
 
 function moveNoButton() {
   const x = Math.random() * (window.innerWidth - noBtn.offsetWidth - 20);
