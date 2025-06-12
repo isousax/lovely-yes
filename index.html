@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lovely Yes</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Sacramento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- First screen: Question -->
+  <main class="container" role="main">
+    <h1 id="proposalText" aria-label="Pedido de namoro">💌</h1>
+
+    <div class="buttons">
+      <button id="btnYes" onclick="accepted()" aria-label="Aceitar pedido">SIM</button>
+      <button id="btnNo" aria-label="Recusar pedido">NÃO</button>
+    </div>
+
+    <div id="finalMessage" class="hidden" role="status" aria-live="polite"></div>
+  </main>
+
+  <!-- Second screen: Gallery after "yes" -->
+  <section id="galleryScreen" class="hidden fade" aria-hidden="true">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="img/img1.png" alt="Foto 1 do casal" loading="lazy">
+          <p class="caption">"Você sempre esteve ao meu lado..."</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="img/img2.png" alt="Foto 2 do casal" loading="lazy">
+          <p class="caption">"Cada momento contigo vale ouro."</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="img/img3.png" alt="Foto 3 do casal" loading="lazy">
+          <p class="caption">"Te amo."</p>
+        </div>
+        
+        <!-- Add photo...
+        <div class="swiper-slide">
+          <img src="img/img4.png" alt="Foto 4 do casal" loading="lazy">
+          <p class="caption">"Legenda"</p>
+        </div-->
+        
+      </div>
+
+      <!-- Gallery Controls -->
+      <div class="swiper-pagination" aria-hidden="true"></div>
+      <div class="swiper-button-prev" aria-label="Foto anterior"></div>
+      <div class="swiper-button-next" aria-label="Próxima foto"></div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

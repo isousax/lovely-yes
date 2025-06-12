@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to top right, #ffdde1, #ee9ca7);
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1#proposalText {
+  font-family: 'Sacramento', cursive;
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  color: #d81b60;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+button {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 90%;
+}
+
+#btnYes {
+  background: linear-gradient(145deg, #fdfbfb, #ebedee);
+  color: #d81b60;
+  border: 2px solid #f8bbd0;
+}
+
+#btnYes:hover {
+  background: #f8bbd0;
+  color: white;
+  transform: scale(1.05);
+}
+
+#btnNo {
+  background: linear-gradient(145deg, #ffafbd, #ffc3a0);
+  color: #c62828;
+  border-color: #ef9a9a;
+}
+
+#btnNo:hover {
+  background: #ef9a9a;
+  transform: scale(1.05);
+}
+
+#finalMessage { 
+  font-family: "Edu NSW ACT Hand Pre", cursive;
+  font-weight: 600;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  font-size: 0.9rem;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+#galleryScreen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+#galleryScreen img {
+  width: 90%;
+  max-width: 300px;
+  border-radius: 15px;
+  margin: 20px 0 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  animation: fadeIn 2s ease;
+}
+
+.caption {
+  margin-bottom: 50px;
+  animation: fadeIn 2s ease;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 0 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.heart {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle at 30% 30%, #ff4d88, #e91e63);
+  transform: rotate(45deg);
+  bottom: 0;
+  opacity: 0.8;
+  animation: float 6s linear forwards;
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 30%, #ff4d88, #e91e63);
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -50%;
+  left: 0;
+}
+
+.heart::after {
+  left: -50%;
+  top: 0;
+}
+
+.sparkle {
+  position: fixed;
+  top: -10px;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #ffffff, #ffccf9);
+  border-radius: 50%;
+  opacity: 1;
+  animation: driftDown 6s linear forwards;
+  z-index: 100;
+  pointer-events: none;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes driftDown {
+  0% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(120vh);
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.swiper {
+  width: 90vw;
+  max-width: 800px;
+  height: auto;
+  max-height: 80vh;
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  max-height: 60vh;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: opacity 1.5s ease-in-out;
+}
+
+.floating-caption {
+  position: absolute;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  animation: floatUp 8s ease-in-out forwards;
+  opacity: 0.9;
+  pointer-events: none;
+  text-shadow: 0 0 10px rgba(255,255,255,0.7);
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #d81b60 !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #ffffff !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #d81b60 !important;
+  opacity: 1;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  h1#proposalText {
+    font-size: clamp(2rem, 8vw, 4rem);
+  }
+
+  .caption {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  #galleryScreen img {
+    width: 90%;
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 480px) {
+  h1#proposalText {
+    font-size: clamp(1.5rem, 9vw, 3rem);
+  }
+
+  .caption {
+    font-size: 0.95rem;
+  }
+
+  .swiper {
+    width: 95vw;
+  }
+}
